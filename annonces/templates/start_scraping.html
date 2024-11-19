@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démarrer le Scraping</title>
+    <style>
+        /* Styles CSS intégrés */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+        }
+
+        .form-section {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Démarrer le Scraping</h1>
+    </header>
+
+    <section class="form-section">
+        <h2>Formulaire de Scraping</h2>
+        <form method="POST">
+            <!-- Django CSRF token (à ajouter avec Django) -->
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="pages">Nombre de pages :</label>
+                <input type="number" id="pages" name="pages" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="niche">Choisissez une niche :</label>
+                <select id="niche" name="niche" required>
+                    <option value="a_vendre">Appartement à vendre</option>
+                    <option value="a_louer">Appartement à louer</option>
+                    <option value="studio">Studio</option>
+                    <option value="T1">T1</option>
+                    <option value="T2">T2</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Lancer le Scraping</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rabii Zahnoune - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
