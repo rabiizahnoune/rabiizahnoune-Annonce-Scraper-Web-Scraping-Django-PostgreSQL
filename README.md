@@ -24,7 +24,7 @@ Suivez ces étapes pour démarrer votre projet.
 Clonez ce projet sur votre machine locale :
 
 ```bash
-git clone <URL_DU_REPOSITORY>
+git clone https://github.com/rabiizahnoune/rabiizahnoune-Annonce-Scraper-Web-Scraping-Django-PostgreSQL
 cd <Dossier_Du_Projet>
 
 2. Construire les images Docker
